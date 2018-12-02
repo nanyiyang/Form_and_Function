@@ -35,6 +35,7 @@
             tools:layout_editor_absoluteY="115dp">
 
             <RadioGroup
+                android:id="@+id/genderGroup"
                 android:layout_width="182dp"
                 android:layout_height="match_parent">
 
@@ -50,6 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="buttonPreference"
                     android:text="Male" />
 
                 <RadioButton
@@ -57,11 +59,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="buttonPreference"
                     android:text="Female" />
 
             </RadioGroup>
 
             <RadioGroup
+                android:id="@+id/preferenceType"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -77,6 +81,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="buttonPreference"
                     android:text="Smart" />
 
                 <RadioButton
@@ -84,6 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="buttonPreference"
                     android:text="Street" />
             </RadioGroup>
 
