@@ -23,6 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AllClothing"
+            android:label="@string/title_activity_all_clothing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RandomOutfit"
+            android:label="@string/title_activity_random_outfit"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
