@@ -28,21 +28,21 @@
             tools:layout_editor_absoluteY="1dp">
 
             <TextView
-                android:id="@+id/LocationLabel"
+                android:id="@+id/locationLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Location" />
 
             <TextView
-                android:id="@+id/WeatherLabel"
+                android:id="@+id/weatherLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Weather" />
 
             <TextView
-                android:id="@+id/TemperatureLabel"
+                android:id="@+id/temperatureLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -55,21 +55,21 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/LocationValue"
+                android:id="@+id/locationValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/WeatherValue"
+                android:id="@+id/weatherValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/TemperatureValue"
+                android:id="@+id/temperatureValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -91,7 +91,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/RefreshWeatherButton"
+            android:id="@+id/refreshWeatherButton"
             android:layout_width="360dp"
             android:layout_height="55dp"
             android:text="Fetch Weather"
@@ -104,7 +104,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/AllClothesButton"
+                android:id="@+id/allClothesButton"
                 android:layout_width="180dp"
                 android:layout_height="55dp"
                 android:text="View All Clothing"
@@ -112,7 +112,7 @@
                 tools:layout_editor_absoluteY="118dp" />
 
             <Button
-                android:id="@+id/RandomOutfitButton"
+                android:id="@+id/randomOutfitButton"
                 android:layout_width="180dp"
                 android:layout_height="55dp"
                 android:layout_weight="1"
