@@ -14,10 +14,11 @@ import android.widget.RadioGroup;
 
 public class HomeScreen extends AppCompatActivity {
 
-    /*** To check if either of the Radio Buttons for gender has been checked. */
+    /*** To check if either of the Radio Buttons for gender has been checked. Not finished. */
     private boolean genderCheckField = false;
 
-    /*** To check if either of the Radio Buttons for preference type has been checked. */
+    /*** To check if either of the Radio Buttons for preference type has been checked. Not finished.
+     */
     private boolean preferenceCheckField = false;
 
     public String gender;
@@ -44,6 +45,10 @@ public class HomeScreen extends AppCompatActivity {
     }
 
 
+    /**
+     * Used to set values according to the radio buttons being selected.
+     * @param view
+     */
     public void buttonPreference(View view) {
         boolean check = ((RadioButton) view).isChecked();
         switch (view.getId()) {
