@@ -6,10 +6,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.telecom.Call;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static String weather;
+    public static int temperature;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    
+    private void fetchWeather() {
+        Button fetchWeatherNow = (Button) findViewById(R.id.refreshWeatherButton);
+        // Do API Call and return Weather and Location. This should store the weather and
+        // temperature as a string/ int in the above variables.
+
+        // Display the Weather, Location and Temperature in TextView respectively.
+
+    }
+
 
 }

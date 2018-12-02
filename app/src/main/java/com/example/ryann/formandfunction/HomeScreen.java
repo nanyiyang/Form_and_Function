@@ -21,9 +21,9 @@ public class HomeScreen extends AppCompatActivity {
      */
     private boolean preferenceCheckField = false;
 
-    public String gender;
+    public static String gender;
 
-    public String preference;
+    public static String preference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        
 
         goToActivityMain();
     }
@@ -42,11 +43,13 @@ public class HomeScreen extends AppCompatActivity {
                 startActivity(new Intent(HomeScreen.this, MainActivity.class));
             }
         });
+
     }
 
 
     /**
-     * Used to set values according to the radio buttons being selected.
+     * Used to set values according to the radio buttons being selected. Set values of gender and
+     * preference as Strings.
      * @param view
      */
     public void buttonPreference(View view) {
