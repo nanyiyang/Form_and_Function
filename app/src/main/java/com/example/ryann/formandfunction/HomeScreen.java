@@ -46,7 +46,8 @@ public class HomeScreen extends AppCompatActivity {
 
 
     /**
-     * Used to set values according to the radio buttons being selected.
+     * Used to set values according to the radio buttons being selected. Set values of gender and
+     * preference as Strings.
      * @param view
      */
     public void buttonPreference(View view) {
