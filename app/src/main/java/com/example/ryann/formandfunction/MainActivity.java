@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.telecom.Call;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void fetchWeather() {
         Button fetchWeatherNow = (Button) findViewById(R.id.refreshWeatherButton);
+        TextView weatherValue = findViewById(R.id.weatherValue);
         // Do API Call and return Weather and Location. This should store the weather and
         // temperature as a string/ int in the above variables.
 
