@@ -12,8 +12,22 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Stores a String of Weather output returned from the API Call
+     */
     public static String weather;
+
+    /**
+     * Stores an integer value of temperature in Celsius/ Fahrenheit returned from API Call
+     */
     public static int temperature;
+
+    /**
+     * Used to check if Fetch Weather button has been pressed. Go to All Clothing Button and
+     * Go To Random Outfit Button, when pressed without first pressing the Fetch Weather Button,
+     * will return a Fab Message.
+     */
+    public boolean fetchWeatherCheck = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
