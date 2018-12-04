@@ -10,6 +10,8 @@ import android.telecom.Call;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
+import java.net.URLConnection;
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,6 +53,15 @@ public class MainActivity extends AppCompatActivity {
         TextView weatherValue = findViewById(R.id.weatherValue);
         // Do API Call and return Weather and Location. This should store the weather and
         // temperature as a string/ int in the above variables.
+        try {
+            URL myURL = new URL("https://www.metaweather.com/api/location/44418/");
+            URLConnection myURLConnection = myURL.openConnection();
+            myURLConnection.connect();
+        }
+        catch (Exception e) {
+            // new URL() failed
+            // ...
+        }
 
         // Display the Weather, Location and Temperature in TextView respectively.
 
