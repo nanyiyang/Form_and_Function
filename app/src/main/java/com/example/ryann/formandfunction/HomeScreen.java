@@ -33,16 +33,37 @@ public class HomeScreen extends AppCompatActivity {
         setSupportActionBar(toolbar);
         
 
-        goToActivityMain();
+//        goToActivityMain();
     }
-    private void goToActivityMain() {
-        Button homeScreenNextButton = (Button) findViewById(R.id.homeScreenNextButton);
-        homeScreenNextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeScreen.this, MainActivity.class));
-            }
-        });
+//    private void goToActivityMain() {
+//
+//        Button homeScreenNextButton = (Button) findViewById(R.id.homeScreenNextButton);
+//        homeScreenNextButton.setOnClickListener(new View.OnClickListener() {
+//            boolean canAdvance = false;
+//            if (canAdvance) {
+//                @Override
+//                public void onClick(View v) {
+//                    startActivity(new Intent(HomeScreen.this, MainActivity.class));
+//                }
+//            }
+//
+//        });
+//
+//    }
+
+    public void nextBTN(View view){
+        boolean canAdvance = false;
+        RadioGroup preferenceGroup = (RadioGroup) findViewById(R.id.preferenceGroup);
+        RadioGroup genderGroup = (RadioGroup) findViewById(R.id.genderGroup);
+        if (preferenceGroup.getCheckedRadioButtonId() == -1 || genderGroup.getCheckedRadioButtonId() == -1) {
+            Snackbar.make(view, "Error, please select preferences.", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+        } else {
+            canAdvance = true;
+        }
+        if (canAdvance) {
+            startActivity(new Intent(HomeScreen.this, MainActivity.class));
+        }
 
     }
 
