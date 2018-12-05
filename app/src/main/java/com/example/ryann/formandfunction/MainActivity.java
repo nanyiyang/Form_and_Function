@@ -2,12 +2,15 @@ package com.example.ryann.formandfunction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.telecom.Call;
+import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Button;
 import java.net.URLConnection;
@@ -65,6 +68,24 @@ public class MainActivity extends AppCompatActivity {
 
         // Display the Weather, Location and Temperature in TextView respectively.
 
+    }
+    public void refreshWeather(View view) {
+        ProgressBar refreshIcon = (ProgressBar) findViewById(R.id.progressBar);
+        refreshIcon.setVisibility(View.VISIBLE);
+        Button fetchWeatherNow = (Button) findViewById(R.id.refreshWeatherButton);
+        //disables button so it can't be spammed.
+        fetchWeatherNow.setEnabled(false);
+
+        new CountDownTimer(2000, 1000) {
+            public void onTick(long millisUntilFinished) { }
+            public void onFinish() {
+                ProgressBar refreshIcon = (ProgressBar) findViewById(R.id.progressBar);
+                refreshIcon.setVisibility(View.INVISIBLE);
+                Button fetchWeatherNow = (Button) findViewById(R.id.refreshWeatherButton);
+                //Enables button after loading icon disappears.
+                fetchWeatherNow.setEnabled(true);
+            }
+        }.start();
     }
 
 
