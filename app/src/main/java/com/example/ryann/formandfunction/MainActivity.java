@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
     public static int temperature;
 
     /**
-     * Used to check if Fetch Weather button has been pressed. Go to All Clothing Button and
-     * Go To Random Outfit Button, when pressed without first pressing the Fetch Weather Button,
-     * will return a Fab Message.
+     * Used to check if Fetch Weather button has been pressed. "Go to All Clothing" Button and
+     * "Go To Random Outfit" Button, when pressed without first pressing the Fetch Weather Button,
+     * will return a Fab(Error) Message.
      */
     public boolean fetchWeatherCheck = false;
 
@@ -59,8 +59,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * fetchWeatherCheck will be assigned to be true when the refreshWeatherButton is clicked.
+     */
     private void fetchWeather() {
         Button fetchWeatherNow = (Button) findViewById(R.id.refreshWeatherButton);
+        fetchWeatherNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fetchWeatherCheck = true;
+                // Add more code inside to retrieve weather information.
+            }
+        });
+
         // Do API Call and return Weather and Location. This should store the weather and
         // temperature as a string/ int in the above variables.
 
