@@ -24,8 +24,10 @@
         <TextView
             android:id="@+id/welcomeText"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:text="@string/welcome_message" />
+            android:layout_height="125dp"
+            android:text="@string/welcome_message"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,7 +46,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Gender" />
+                    android:text="Gender"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/genderButtonMale"
@@ -65,7 +68,7 @@
             </RadioGroup>
 
             <RadioGroup
-                android:id="@+id/preferenceType"
+                android:id="@+id/preferenceGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -74,7 +77,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Style" />
+                    android:text="Style"
+                    android:textSize="18sp" />
 
                 <RadioButton
                     android:id="@+id/styleButtonSmart"
@@ -106,6 +110,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
+        android:onClick="nextBTN"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

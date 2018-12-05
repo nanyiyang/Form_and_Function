@@ -2,32 +2,24 @@ package com.example.ryann.formandfunction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.telecom.Call;
+import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Button;
+import java.net.URLConnection;
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
-    /**
-     * Stores a String of Weather output returned from the API Call
-     */
     public static String weather;
-
-    /**
-     * Stores an integer value of temperature in Celsius/ Fahrenheit returned from API Call
-     */
     public static int temperature;
-
-    /**
-     * Used to check if Fetch Weather button has been pressed. "Go to All Clothing" Button and
-     * "Go To Random Outfit" Button, when pressed without first pressing the Fetch Weather Button,
-     * will return a Fab(Error) Message.
-     */
-    public boolean fetchWeatherCheck = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,24 +51,41 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * fetchWeatherCheck will be assigned to be true when the refreshWeatherButton is clicked.
-     */
     private void fetchWeather() {
         Button fetchWeatherNow = (Button) findViewById(R.id.refreshWeatherButton);
-        fetchWeatherNow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fetchWeatherCheck = true;
-                // Add more code inside to retrieve weather information.
-            }
-        });
-
+        TextView weatherValue = findViewById(R.id.weatherValue);
         // Do API Call and return Weather and Location. This should store the weather and
         // temperature as a string/ int in the above variables.
+        try {
+            URL myURL = new URL("https://www.metaweather.com/api/location/44418/");
+            URLConnection myURLConnection = myURL.openConnection();
+            myURLConnection.connect();
+        }
+        catch (Exception e) {
+            // new URL() failed
+            // ...
+        }
 
         // Display the Weather, Location and Temperature in TextView respectively.
 
+    }
+    public void refreshWeather(View view) {
+        ProgressBar refreshIcon = (ProgressBar) findViewById(R.id.progressBar);
+        refreshIcon.setVisibility(View.VISIBLE);
+        Button fetchWeatherNow = (Button) findViewById(R.id.refreshWeatherButton);
+        //disables button so it can't be spammed.
+        fetchWeatherNow.setEnabled(false);
+
+        new CountDownTimer(2000, 1000) {
+            public void onTick(long millisUntilFinished) { }
+            public void onFinish() {
+                ProgressBar refreshIcon = (ProgressBar) findViewById(R.id.progressBar);
+                refreshIcon.setVisibility(View.INVISIBLE);
+                Button fetchWeatherNow = (Button) findViewById(R.id.refreshWeatherButton);
+                //Enables button after loading icon disappears.
+                fetchWeatherNow.setEnabled(true);
+            }
+        }.start();
     }
 
 
