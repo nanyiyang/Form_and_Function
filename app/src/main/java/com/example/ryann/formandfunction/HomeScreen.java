@@ -14,16 +14,11 @@ import android.widget.RadioGroup;
 
 public class HomeScreen extends AppCompatActivity {
 
-    /*** To check if either of the Radio Buttons for gender has been checked. Not finished. */
-    private boolean genderCheckField = false;
-
-    /*** To check if either of the Radio Buttons for preference type has been checked. Not finished.
-     */
-    private boolean preferenceCheckField = false;
-
     public static String gender;
 
     public static String preference;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +57,8 @@ public class HomeScreen extends AppCompatActivity {
             canAdvance = true;
         }
         if (canAdvance) {
+            AllClothing.setGender(gender);
+            AllClothing.setStyle(preference);
             startActivity(new Intent(HomeScreen.this, MainActivity.class));
         }
 
@@ -79,27 +76,25 @@ public class HomeScreen extends AppCompatActivity {
             case R.id.genderButtonMale:
                 if (check)
                     gender = "Male";
-                    genderCheckField = true;
                 break;
 
             case R.id.genderButtonFemale:
                 if (check)
                     gender = "Female";
-                    genderCheckField = true;
                 break;
         }
         switch (view.getId()) {
             case R.id.styleButtonSmart:
                 if (check)
                     preference = "Smart";
-                    preferenceCheckField = true;
                 break;
             case R.id.styleButtonStreet:
                 if (check)
                     preference = "Street";
-                    preferenceCheckField = true;
                 break;
         }
+
     }
+
 
 }
