@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
-                    "http://api.apixu.com/v1/forecast.json?key=7ad51d0551364c7c926203525180712&q=61801",
+                    "http://api.apixu.com/v1/current.json?key=7ad51d0551364c7c926203525180712&q=61801",
                     null,
                     new Response.Listener<JSONObject>() {
                         @Override
