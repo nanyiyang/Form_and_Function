@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG, response.toString());
                             try {
                                 JSONObject weather = response.getJSONObject("current");
-                                Double temperature = weather.getDouble("temp_c");
+                                Double temperature = weather.getDouble("temp_f");
                                 String temperatureString = temperature.toString();
                                 Log.d(TAG, temperatureString);
                             } catch (JSONException e) {
