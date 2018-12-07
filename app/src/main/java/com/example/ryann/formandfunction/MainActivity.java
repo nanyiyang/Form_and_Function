@@ -23,6 +23,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import org.json.JSONException;
@@ -118,26 +120,25 @@ public class MainActivity extends AppCompatActivity {
         try {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
-                    "https://www.metaweather.com/api/location/44418/",
+                    "http://api.apixu.com/v1/current.json?key=7ad51d0551364c7c926203525180712&q=61801",
                     null,
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(final JSONObject response) {
                             Log.d(TAG, response.toString());
-                            String responseString = response.toString();
                             try {
-                                JSONObject tempObject = new JSONObject(responseString);
-                                JSONObject weather = tempObject.getJSONObject("consolidated_weather");
-                                String timezone = weather.getString("the_temp");
-                                Log.d(TAG, " HERERHREHREHREHREHREHREHREHRE" + timezone);
+                                JSONObject weather = response.getJSONObject("current");
+                                Double temperature = weather.getDouble("temp_c");
+                                String temperatureString = temperature.toString();
+                                Log.d(TAG, temperatureString);
                             } catch (JSONException e) {
-                                Log.d(TAG, "UHOH UHOH ERROR ERROR ERROR ERROR ERROR");
+                                Log.d(TAG, "ERROR JSON FILE PARSED INCORRECTLY");
                             }
                         }
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(final VolleyError error) {
-                            Log.d(TAG, "ERROR ERROR ERROR ERROR ERROR");
+                            Log.d(TAG, "VOLLEY ERROR DID NOT RECEIVE A  VALID JSON FILE");
                             Log.d(TAG, error.toString());
                         }
                     });
