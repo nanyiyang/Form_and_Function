@@ -18,6 +18,8 @@ public class HomeScreen extends AppCompatActivity {
 
     public static String preference;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +57,8 @@ public class HomeScreen extends AppCompatActivity {
             canAdvance = true;
         }
         if (canAdvance) {
+            AllClothing.setGender(gender);
+            AllClothing.setStyle(preference);
             startActivity(new Intent(HomeScreen.this, MainActivity.class));
         }
 
@@ -89,6 +93,8 @@ public class HomeScreen extends AppCompatActivity {
                     preference = "Street";
                 break;
         }
+
     }
+
 
 }

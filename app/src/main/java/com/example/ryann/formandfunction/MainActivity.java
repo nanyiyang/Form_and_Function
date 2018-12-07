@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private static RequestQueue requestQueue;
 
     public static String weather;
-    public static int temperature;
+    public static double temperature;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,6 +131,9 @@ public class MainActivity extends AppCompatActivity {
                                 Double temperature = weather.getDouble("temp_f");
                                 String temperatureString = temperature.toString();
                                 Log.d(TAG, temperatureString);
+                                // Added Code here to set the temperature based on JSON input.
+                                // See AllClothing Class for the method.
+                                AllClothing.setTemperature(temperature);
                             } catch (JSONException e) {
                                 Log.d(TAG, "ERROR JSON FILE PARSED INCORRECTLY");
                             }
@@ -144,11 +147,8 @@ public class MainActivity extends AppCompatActivity {
                     });
             requestQueue.add(jsonObjectRequest);
 
-
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-
 }
