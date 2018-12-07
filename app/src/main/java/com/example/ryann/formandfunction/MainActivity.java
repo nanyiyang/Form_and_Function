@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(final VolleyError error) {
-                            Log.d(TAG, "VOLLEY ERROR DID NOT RECEIVE A VALID JSON FILE");
+                            Log.d(TAG, "VOLLEY ERROR DID NOT RECEIVE A  VALID JSON FILE");
                             Log.d(TAG, error.toString());
                         }
                     });
