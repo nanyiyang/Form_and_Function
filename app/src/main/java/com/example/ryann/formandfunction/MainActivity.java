@@ -120,26 +120,25 @@ public class MainActivity extends AppCompatActivity {
         try {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
-                    "https://www.metaweather.com/api/location/44418/",
+                    "http://api.apixu.com/v1/current.json?key=7ad51d0551364c7c926203525180712&q=61801",
                     null,
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(final JSONObject response) {
                             Log.d(TAG, response.toString());
-                            String responseString = response.toString();
                             try {
-                                JSONArray weather = response.getJSONArray("consolidated_weather");
-                                JSONObject temperature = (JSONObject) weather.get(0);
-                                String test = Double.toString(temperature.getDouble("the_temp"));
-                                Log.d(TAG, test);
+                                JSONObject weather = response.getJSONObject("current");
+                                Double temperature = weather.getDouble("temp_c");
+                                String temperatureString = temperature.toString();
+                                Log.d(TAG, temperatureString);
                             } catch (JSONException e) {
-                                Log.d(TAG, "UHOH UHOH ERROR ERROR ERROR ERROR ERROR");
+                                Log.d(TAG, "ERROR JSON FILE PARSED INCORRECTLY");
                             }
                         }
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(final VolleyError error) {
-                            Log.d(TAG, "ERROR ERROR ERROR ERROR ERROR");
+                            Log.d(TAG, "VOLLEY ERROR DID NOT RECEIVE A VALID JSON FILE");
                             Log.d(TAG, error.toString());
                         }
                     });
