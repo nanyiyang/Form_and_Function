@@ -23,6 +23,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import org.json.JSONException;
@@ -126,10 +128,10 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG, response.toString());
                             String responseString = response.toString();
                             try {
-                                JSONObject tempObject = new JSONObject(responseString);
-                                JSONObject weather = tempObject.getJSONObject("consolidated_weather");
-                                String timezone = weather.getString("the_temp");
-                                Log.d(TAG, " HERERHREHREHREHREHREHREHREHRE" + timezone);
+                                JSONArray weather = response.getJSONArray("consolidated_weather");
+                                JSONObject temperature = (JSONObject) weather.get(0);
+                                String test = Double.toString(temperature.getDouble("the_temp"));
+                                Log.d(TAG, test);
                             } catch (JSONException e) {
                                 Log.d(TAG, "UHOH UHOH ERROR ERROR ERROR ERROR ERROR");
                             }
