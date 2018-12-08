@@ -9,6 +9,27 @@ import android.view.View;
 
 public class RandomOutfit extends AppCompatActivity {
 
+    private static double temperature;
+    private static String style;
+    private static String gender;
+
+    // Setter for Gender
+    public static void setGender(String newGender) {
+        gender = newGender;
+    }
+
+    // Setter for Style Preference
+    public static void setStyle(String newStyle) {
+        style = newStyle;
+    }
+
+    // Setter for Temperature where the input comes from the API Call.
+    public static void setTemperature(double newTemperature) {
+        temperature = newTemperature;
+    }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
