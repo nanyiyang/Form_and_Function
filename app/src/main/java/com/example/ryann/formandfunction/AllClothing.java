@@ -91,7 +91,6 @@ public class AllClothing extends AppCompatActivity {
 
                 // Temperature is above 30.0
             } else {
-
                 if (getPrecipitation() > 0.0) {
                     // Returns clothing that is suitable for temperature above 30.0F and for Rainy weather
                     if (getStyle() == "Smart" && getGender() == "Male") {
