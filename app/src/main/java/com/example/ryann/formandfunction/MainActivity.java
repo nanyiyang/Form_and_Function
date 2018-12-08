@@ -134,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                                 // Added Code here to set the temperature based on JSON input.
                                 // See AllClothing Class for the method.
                                 AllClothing.setTemperature(temperature);
+                                RandomOutfit.setTemperature(temperature);
                             } catch (JSONException e) {
                                 Log.d(TAG, "ERROR JSON FILE PARSED INCORRECTLY");
                             }

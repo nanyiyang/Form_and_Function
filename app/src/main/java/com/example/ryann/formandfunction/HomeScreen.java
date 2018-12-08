@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import java.util.Random;
+
 public class HomeScreen extends AppCompatActivity {
 
     public static String gender;
@@ -58,7 +60,9 @@ public class HomeScreen extends AppCompatActivity {
         }
         if (canAdvance) {
             AllClothing.setGender(gender);
+            RandomOutfit.setGender(gender);
             AllClothing.setStyle(preference);
+            RandomOutfit.setStyle(preference);
             startActivity(new Intent(HomeScreen.this, MainActivity.class));
         }
 
