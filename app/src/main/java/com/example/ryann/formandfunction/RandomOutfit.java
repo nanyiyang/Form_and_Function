@@ -28,6 +28,8 @@ public class RandomOutfit extends AppCompatActivity {
         temperature = newTemperature;
     }
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
