@@ -99,19 +99,19 @@ public class MainActivity extends AppCompatActivity {
                                 globalTemperature = temperature;
                                 String temperatureString = temperature.toString();
                                 Log.d(TAG, temperatureString);
+                                // set button to change
+                                TextView temperatureValue = (TextView) findViewById(R.id.temperatureValue);
+                                String temperatureStringToPrint = temperatureString + " " + "\u00b0" + "F";
+                                temperatureValue.setText(temperatureStringToPrint);
 
                                 // Finds location
                                 JSONObject weatherLocation = response.getJSONObject("location");
                                 String locationString = weatherLocation.getString("name");
                                 globalLocation = locationString;
                                 Log.d(TAG, locationString);
-
-                                // Finds rain level
-                                JSONObject weatherPrecip = response.getJSONObject("current");
-                                Double precipitation = weatherPrecip.getDouble("precip_mm");
-                                globalPrecipitation = precipitation;
-                                String precipitationString = precipitation.toString();
-                                Log.d(TAG, precipitationString);
+                                // set button to change
+                                TextView locationValue = (TextView) findViewById(R.id.locationValue);
+                                locationValue.setText(locationString);
 
                                 // Finds weather
                                 JSONObject weather = response.getJSONObject("current");
@@ -119,6 +119,16 @@ public class MainActivity extends AppCompatActivity {
                                 String weatherString = weather1.getString("text");
                                 globalWeather = weatherString;
                                 Log.d(TAG, weatherString);
+                                // set button to change
+                                TextView weatherValue = (TextView) findViewById(R.id.weatherValue);
+                                weatherValue.setText(weatherString);
+
+                                // Finds rain level
+                                JSONObject weatherPrecip = response.getJSONObject("current");
+                                Double precipitation = weatherPrecip.getDouble("precip_mm");
+                                globalPrecipitation = precipitation;
+                                String precipitationString = precipitation.toString();
+                                Log.d(TAG, precipitationString);
                             } catch (JSONException e) {
                                 Log.d(TAG, "ERROR JSON FILE PARSED INCORRECTLY");
                             }
