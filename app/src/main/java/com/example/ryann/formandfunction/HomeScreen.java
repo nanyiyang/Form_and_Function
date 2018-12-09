@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
 import java.util.Random;
 
 public class HomeScreen extends AppCompatActivity {
@@ -21,32 +20,14 @@ public class HomeScreen extends AppCompatActivity {
     public static String preference;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        
 
-//        goToActivityMain();
     }
-//    private void goToActivityMain() {
-//
-//        Button homeScreenNextButton = (Button) findViewById(R.id.homeScreenNextButton);
-//        homeScreenNextButton.setOnClickListener(new View.OnClickListener() {
-//            boolean canAdvance = false;
-//            if (canAdvance) {
-//                @Override
-//                public void onClick(View v) {
-//                    startActivity(new Intent(HomeScreen.this, MainActivity.class));
-//                }
-//            }
-//
-//        });
-//
-//    }
 
     public void nextBTN(View view){
         boolean canAdvance = false;
@@ -65,7 +46,6 @@ public class HomeScreen extends AppCompatActivity {
             RandomOutfit.setStyle(preference);
             startActivity(new Intent(HomeScreen.this, MainActivity.class));
         }
-
     }
 
 
