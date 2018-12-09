@@ -24,7 +24,7 @@
 
             <TextView
                 android:id="@+id/malesmarttopcardigan"
-                android:layout_width="328dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Cardigan"
@@ -32,9 +32,12 @@
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:maxWidth="300dp"
+                android:maxHeight="300dp"
                 app:srcCompat="@drawable/male_smart_top_cardigan" />
 
         </LinearLayout>
@@ -46,7 +49,7 @@
 
             <TextView
                 android:id="@+id/malesmarttopovercoat"
-                android:layout_width="303dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Overcoat"
@@ -54,8 +57,8 @@
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/male_smart_top_overcoat" />
 
@@ -68,7 +71,7 @@
 
             <TextView
                 android:id="@+id/malesmarttopoxfordshirt"
-                android:layout_width="339dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Oxford Shirt"
@@ -76,8 +79,8 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/male_smart_top_oxfordshirt" />
 
@@ -90,7 +93,7 @@
 
             <TextView
                 android:id="@+id/malesmartbottomchinos"
-                android:layout_width="337dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Chinos"
@@ -98,8 +101,8 @@
 
             <ImageView
                 android:id="@+id/chinos"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/male_smart_bottom_chinos" />
         </LinearLayout>
@@ -111,7 +114,7 @@
 
             <TextView
                 android:id="@+id/malesmartbottomdresspants"
-                android:layout_width="335dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Dress Pants"
@@ -119,8 +122,8 @@
 
             <ImageView
                 android:id="@+id/dresspants"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/male_smart_bottom_dresspants" />
 
@@ -133,9 +136,36 @@
 
             <TextView
                 android:id="@+id/malesmartshoeschelseaboots"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:text="Chelsea Boots" />
+
+            <ImageView
+                android:id="@+id/chelseaboots"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/male_smart_shoes_chelseaboots" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/malesmartshoesdressshoes"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:text="Chelsea Boots" />
+
+            <ImageView
+                android:id="@+id/dressshoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/male_smart_shoes_dressshoes" />
 
         </LinearLayout>
 
