@@ -5,7 +5,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 
 public class AllClothing extends AppCompatActivity {
 
@@ -56,63 +58,65 @@ public class AllClothing extends AppCompatActivity {
 //        return precipitation;
 //    }
 
-    // Tentatively set the weather where you require coat/ winter jacket is below 30.0 Fahrenheit
-    public static void getCorrectClothing() {
+    // Tentatively set the weather where you require coat/ winter jacket is below 45.0 Fahrenheit
+    public void getCorrectClothing() {
         try {
             // Selects clothing suitable for this weather.
-            if (MainActivity.globalTemperature < 30.0) {
+            if (MainActivity.globalTemperature < 45) {
                 if (MainActivity.globalPrecipitation > 0.0) {
-                    // Returns clothing that is suitable for temperature below 30.0F and for Rainy weather
-                    if (HomeScreen.globalPreference == "Smart" && HomeScreen.globalGender == "Male") {
+                    // Returns clothing that is suitable for temperature below 45.0F and for Rainy weather
+                    if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
+                        LinearLayout maleStreet = (LinearLayout) findViewById(R.id.maleStreet);
+                        maleStreet.setVisibility(View.GONE);
 
-                    } else if (HomeScreen.globalPreference == "Smart" && HomeScreen.globalGender == "Female") {
+                    } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
-                    } else if (HomeScreen.globalPreference == "Street" && HomeScreen.globalGender == "Male") {
+                    } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
 
-                    } else if (HomeScreen.globalPreference == "Street" && HomeScreen.globalGender == "Female") {
+                    } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
                     } else {
                         throw new NullPointerException();
                     }
                 } else {
-                    // Returns clothing that is suitable for temperature below 30.0F and for Sunny weather
-                    if (HomeScreen.globalPreference == "Smart" && HomeScreen.globalGender == "Male") {
+                    // Returns clothing that is suitable for temperature below 45.0F and for Sunny weather
+                    if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
 
-                    } else if (HomeScreen.globalPreference == "Smart" && HomeScreen.globalGender == "Female") {
+                    } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
-                    } else if (HomeScreen.globalPreference == "Street" && HomeScreen.globalGender == "Male") {
+                    } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
 
-                    } else if (HomeScreen.globalPreference == "Street" && HomeScreen.globalGender == "Female") {
+                    } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
                     } else {
                         throw new NullPointerException();
                     }
                 }
 
-                // Temperature is above 30.0
+                // Temperature is above 45.0
             } else {
                 if (MainActivity.globalTemperature > 0.0) {
-                    // Returns clothing that is suitable for temperature above 30.0F and for Rainy weather
-                    if (HomeScreen.globalPreference == "Smart" && HomeScreen.globalGender == "Male") {
+                    // Returns clothing that is suitable for temperature above 45.0F and for Rainy weather
+                    if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
 
-                    } else if (HomeScreen.globalPreference == "Smart" && HomeScreen.globalGender == "Female") {
+                    } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
-                    } else if (HomeScreen.globalPreference == "Street" && HomeScreen.globalGender == "Male") {
+                    } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
 
-                    } else if (HomeScreen.globalPreference == "Street" && HomeScreen.globalGender == "Female") {
+                    } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
                     } else {
                         throw new NullPointerException();
                     }
                 } else {
-                    // Returns clothing that is suitable for temperature above 30.0F and for Sunny weather
-                    if (HomeScreen.globalPreference == "Smart" && HomeScreen.globalGender == "Male") {
+                    // Returns clothing that is suitable for temperature above 45.0F and for Sunny weather
+                    if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
 
-                    } else if (HomeScreen.globalPreference == "Smart" && HomeScreen.globalGender == "Female") {
+                    } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
-                    } else if (HomeScreen.globalPreference == "Street" && HomeScreen.globalGender == "Male") {
+                    } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
 
-                    } else if (HomeScreen.globalPreference == "Street" && HomeScreen.globalGender == "Female") {
+                    } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
                     } else {
                         throw new NullPointerException();
@@ -121,12 +125,14 @@ public class AllClothing extends AppCompatActivity {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            Log.d("test", "ERROR NOT ALL PARAMETERS SET");
         }
 
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getCorrectClothing();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_clothing);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
