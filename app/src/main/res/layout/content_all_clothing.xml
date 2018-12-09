@@ -19,155 +19,314 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/malesmarttopcardigan"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Cardigan"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="120dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:maxWidth="300dp"
-                android:maxHeight="300dp"
-                app:srcCompat="@drawable/male_smart_top_cardigan" />
+                android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/malesmarttopcardigan"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cardigan"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="300dp"
+                    android:maxHeight="300dp"
+                    app:srcCompat="@drawable/male_smart_top_cardigan" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malesmarttopovercoat"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Overcoat"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_smart_top_overcoat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malesmarttopoxfordshirt"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Oxford Shirt"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_smart_top_oxfordshirt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malesmartbottomchinos"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Chinos"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/chinos"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_smart_bottom_chinos" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malesmartbottomdresspants"
+                    android:layout_width="124dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dress Pants"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/dresspants"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_smart_bottom_dresspants" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malesmartshoeschelseaboots"
+                    android:layout_width="184dp"
+                    android:layout_height="wrap_content"
+                    android:text="Chelsea Boots"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/chelseaboots"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_smart_shoes_chelseaboots" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malesmartshoesdressshoes"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:text="Dress Shoes"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/dressshoes"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_smart_shoes_dressshoes" />
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/malesmarttopovercoat"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Overcoat"
-                android:textSize="18sp" />
+                android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="120dp"
-                android:layout_height="150dp"
+                <TextView
+                    android:id="@+id/malestreetbottomskinnyjeans"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Skinny Jeans"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_street_bottom_skinnyjeans" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malestreettopparka"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Parka"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_street_top_parka" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malestreettoptshirt"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="T-Shirt"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_street_top_graphictshirt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malestreettopflanelshirt"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Flanel Shirt"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_street_top_flanelshirt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/male_smart_top_overcoat" />
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/malestreetbottomjoggers"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Joggers"
+                    android:textSize="18sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_street_bottom_joggers" />
 
-            <TextView
-                android:id="@+id/malesmarttopoxfordshirt"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Oxford Shirt"
-                android:textSize="18sp" />
+                android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="120dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/male_smart_top_oxfordshirt" />
+                <TextView
+                    android:id="@+id/malestreetbottomskinnyjeans"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Skinny Jeans"
+                    android:textSize="18sp" />
 
-        </LinearLayout>
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_street_bottom_skinnyjeans" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/malesmartbottomchinos"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Chinos"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/chinos"
-                android:layout_width="120dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/male_smart_bottom_chinos" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/malesmartbottomdresspants"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Dress Pants"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/dresspants"
-                android:layout_width="120dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/male_smart_bottom_dresspants" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/malesmartshoeschelseaboots"
-                android:layout_width="184dp"
-                android:layout_height="wrap_content"
-                android:text="Chelsea Boots" />
-
-            <ImageView
-                android:id="@+id/chelseaboots"
-                android:layout_width="120dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/male_smart_shoes_chelseaboots" />
-
-        </LinearLayout>
+            android:orientation="vertical"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/malesmartshoesdressshoes"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:text="Chelsea Boots" />
-
-            <ImageView
-                android:id="@+id/dressshoes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/male_smart_shoes_dressshoes" />
-
-        </LinearLayout>
-
+            android:orientation="vertical"></LinearLayout>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
