@@ -15,9 +15,9 @@ import java.util.Random;
 
 public class HomeScreen extends AppCompatActivity {
 
-    public static String gender;
+    public static String globalGender;
 
-    public static String preference;
+    public static String globalPreference;
 
 
     @Override
@@ -40,10 +40,6 @@ public class HomeScreen extends AppCompatActivity {
             canAdvance = true;
         }
         if (canAdvance) {
-            AllClothing.setGender(gender);
-            RandomOutfit.setGender(gender);
-            AllClothing.setStyle(preference);
-            RandomOutfit.setStyle(preference);
             startActivity(new Intent(HomeScreen.this, MainActivity.class));
         }
     }
@@ -59,22 +55,22 @@ public class HomeScreen extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.genderButtonMale:
                 if (check)
-                    gender = "Male";
+                    globalGender = "Male";
                 break;
 
             case R.id.genderButtonFemale:
                 if (check)
-                    gender = "Female";
+                    globalGender = "Female";
                 break;
         }
         switch (view.getId()) {
             case R.id.styleButtonSmart:
                 if (check)
-                    preference = "Smart";
+                    globalPreference = "Smart";
                 break;
             case R.id.styleButtonStreet:
                 if (check)
-                    preference = "Street";
+                    globalPreference = "Street";
                 break;
         }
 
