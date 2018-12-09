@@ -18,11 +18,13 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/maleSmart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/cardigan"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:orientation="horizontal">
@@ -48,6 +50,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/overcoat"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:orientation="horizontal">
@@ -70,6 +73,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/oxfordShirt"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:orientation="horizontal">
@@ -92,6 +96,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/chinos"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:orientation="horizontal">
@@ -105,7 +110,7 @@
                     android:textSize="18sp" />
 
                 <ImageView
-                    android:id="@+id/chinos"
+                    android:id="@+id/imageView 12"
                     android:layout_width="120dp"
                     android:layout_height="150dp"
                     android:layout_weight="1"
@@ -113,6 +118,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/dressPants"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:orientation="horizontal">
@@ -135,6 +141,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/chelseaBoots"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
@@ -156,6 +163,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/dressShoes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
@@ -178,34 +186,13 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/maleStreet"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/malestreetbottomskinnyjeans"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Skinny Jeans"
-                    android:textSize="18sp" />
-
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="120dp"
-                    android:layout_height="150dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/male_street_bottom_skinnyjeans" />
-
-            </LinearLayout>
-
-            <LinearLayout
+                android:id="@+id/parka"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
@@ -228,6 +215,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/tshirt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
@@ -250,6 +238,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/flanelShirt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
@@ -272,6 +261,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/joggers"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -295,6 +285,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/skinnyJeans"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -314,6 +305,78 @@
                     android:layout_height="150dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/male_street_bottom_skinnyjeans" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sneakers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malestreetshoessneakers"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sneakers"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_street_shoes_sneakers" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/winterboots"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malestreetshoeswinterboots"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Winter Boots"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_street_shoes_winterboots" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/basketBallShoes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/malestreetshoesbasketballshoes"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Basketball Shoes"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/male_street_shoes_basketballshoes" />
 
             </LinearLayout>
 
