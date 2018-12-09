@@ -116,6 +116,7 @@
                 android:id="@+id/allClothesButton"
                 android:layout_width="180dp"
                 android:layout_height="55dp"
+                android:onClick="goToAllClothing"
                 android:text="View All Clothing"
                 tools:layout_editor_absoluteX="196dp"
                 tools:layout_editor_absoluteY="118dp" />
@@ -125,6 +126,7 @@
                 android:layout_width="180dp"
                 android:layout_height="55dp"
                 android:layout_weight="1"
+                android:onClick="goToRandomOutfit"
                 android:text="Random Outfit" />
         </LinearLayout>
     </LinearLayout>
@@ -151,7 +153,15 @@
         android:id="@+id/spinner"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="155dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
 </android.support.constraint.ConstraintLayout>
