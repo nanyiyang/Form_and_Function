@@ -23,20 +23,20 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/clothingOption1"
-                android:layout_width="wrap_content"
+                android:id="@+id/malesmarttopcardigan"
+                android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Name of clothing"
+                android:text="Cardigan"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/imagePlaceholder1"
+            <ImageView
+                android:id="@+id/imageView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="[Image Placeholder]"
-                android:textSize="18sp" />
+                app:srcCompat="@drawable/male_smart_top_cardigan" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -45,20 +45,20 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/clothingOption2"
-                android:layout_width="wrap_content"
+                android:id="@+id/malesmarttopovercoat"
+                android:layout_width="303dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Name of clothing"
+                android:text="Overcoat"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/imagePlaceholder2"
+            <ImageView
+                android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="[Image Placeholder]"
-                android:textSize="18sp" />
+                app:srcCompat="@drawable/male_smart_top_overcoat" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -67,20 +67,20 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/clothingOption3"
-                android:layout_width="wrap_content"
+                android:id="@+id/malesmarttopoxfordshirt"
+                android:layout_width="339dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Name of clothing"
+                android:text="Oxford Shirt"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/imagePlaceholder3"
+            <ImageView
+                android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="[Image Placeholder]"
-                android:textSize="18sp" />
+                app:srcCompat="@drawable/male_smart_top_oxfordshirt" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -89,20 +89,19 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/clothingOption4"
-                android:layout_width="wrap_content"
+                android:id="@+id/malesmartbottomchinos"
+                android:layout_width="337dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Name of clothing"
+                android:text="Chinos"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/imagePlaceholder4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/chinos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="[Image Placeholder]"
-                android:textSize="18sp" />
+                app:srcCompat="@drawable/male_smart_bottom_chinos" />
         </LinearLayout>
 
         <LinearLayout
@@ -111,20 +110,33 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/clothingOption5"
-                android:layout_width="wrap_content"
+                android:id="@+id/malesmartbottomdresspants"
+                android:layout_width="335dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Name of clothing"
+                android:text="Dress Pants"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/imagePlaceholder5"
+            <ImageView
+                android:id="@+id/dresspants"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="[Image Placeholder]"
-                android:textSize="18sp" />
+                app:srcCompat="@drawable/male_smart_bottom_dresspants" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/malesmartshoeschelseaboots"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Chelsea Boots" />
+
         </LinearLayout>
 
     </LinearLayout>
