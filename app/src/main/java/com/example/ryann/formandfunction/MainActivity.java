@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public static String globalLocation;
     public static String globalWeather;
     public static double globalTemperature;
+    public static double globalPrecipitation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,8 +96,8 @@ public class MainActivity extends AppCompatActivity {
                                 // Finds temperature
                                 JSONObject weatherTemp = response.getJSONObject("current");
                                 Double temperature = weatherTemp.getDouble("temp_f");
-                                String temperatureString = temperature.toString();
                                 globalTemperature = temperature;
+                                String temperatureString = temperature.toString();
                                 Log.d(TAG, temperatureString);
 
                                 // Finds location
@@ -105,9 +106,19 @@ public class MainActivity extends AppCompatActivity {
                                 globalLocation = locationString;
                                 Log.d(TAG, locationString);
 
+                                // Finds rain level
+                                JSONObject weatherPrecip = response.getJSONObject("current");
+                                Double precipitation = weatherPrecip.getDouble("precip_mm");
+                                globalPrecipitation = precipitation;
+                                String precipitationString = precipitation.toString();
+                                Log.d(TAG, precipitationString);
+
                                 // Finds weather
-
-
+                                JSONObject weather = response.getJSONObject("current");
+                                JSONObject weather1 = weather.getJSONObject("condition");
+                                String weatherString = weather1.getString("text");
+                                globalWeather = weatherString;
+                                Log.d(TAG, weatherString);
                             } catch (JSONException e) {
                                 Log.d(TAG, "ERROR JSON FILE PARSED INCORRECTLY");
                             }
