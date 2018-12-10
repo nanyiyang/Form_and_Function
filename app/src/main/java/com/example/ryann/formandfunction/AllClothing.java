@@ -16,6 +16,8 @@ public class AllClothing extends AppCompatActivity {
     public void getCorrectClothing() {
         LinearLayout maleStreet = (LinearLayout) findViewById(R.id.maleStreet);
         LinearLayout maleSmart = (LinearLayout) findViewById(R.id.maleSmart);
+        LinearLayout femaleStreet = (LinearLayout) findViewById(R.id.femaleStreet);
+        LinearLayout femaleSmart = (LinearLayout) findViewById(R.id.femaleSmart);
         LinearLayout accessory = (LinearLayout) findViewById(R.id.accessory);
         LinearLayout chelseaBoots = (LinearLayout) findViewById(R.id.chelseaBoots);
         LinearLayout chinoPants = (LinearLayout) findViewById(R.id.chinos);
@@ -28,7 +30,9 @@ public class AllClothing extends AppCompatActivity {
         LinearLayout tShirt = (LinearLayout) findViewById(R.id.tshirt);
         LinearLayout sneakers = (LinearLayout) findViewById(R.id.sneakers);
         LinearLayout winterBoots = (LinearLayout) findViewById(R.id.winterboots);
-
+        LinearLayout vNeckTShirt = (LinearLayout) findViewById(R.id.vnecktshirt);
+        LinearLayout femaleParka = (LinearLayout) findViewById(R.id.femaleParka);
+        LinearLayout femaleSneakers = (LinearLayout) findViewById(R.id.femalesneakers);
 
         try {
             // Selects clothing suitable for this weather.
@@ -42,6 +46,8 @@ public class AllClothing extends AppCompatActivity {
                         oxfordShirt.setVisibility(View.GONE);
                         accessory.setVisibility(View.VISIBLE);
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
+                        femaleSmart.setVisibility(View.VISIBLE);
+                        accessory.setVisibility(View.VISIBLE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
                         maleStreet.setVisibility(View.VISIBLE);
@@ -51,6 +57,10 @@ public class AllClothing extends AppCompatActivity {
                         accessory.setVisibility(View.VISIBLE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
+                        femaleStreet.setVisibility(View.VISIBLE);
+                        vNeckTShirt.setVisibility(View.GONE);
+                        femaleSneakers.setVisibility(View.GONE);
+                        accessory.setVisibility(View.VISIBLE);
 
                     }
                 } else {
@@ -62,6 +72,7 @@ public class AllClothing extends AppCompatActivity {
                         oxfordShirt.setVisibility(View.GONE);
 
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
+                        femaleSmart.setVisibility(View.VISIBLE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
                         maleStreet.setVisibility(View.VISIBLE);
@@ -70,7 +81,9 @@ public class AllClothing extends AppCompatActivity {
                         sneakers.setVisibility(View.GONE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
-
+                        femaleStreet.setVisibility(View.VISIBLE);
+                        vNeckTShirt.setVisibility(View.GONE);
+                        femaleSneakers.setVisibility(View.GONE);
                     }
                 }
 
@@ -85,6 +98,8 @@ public class AllClothing extends AppCompatActivity {
                         maleDressShoes.setVisibility(View.GONE);
                         accessory.setVisibility(View.VISIBLE);
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
+                        femaleSmart.setVisibility(View.VISIBLE);
+                        accessory.setVisibility(View.VISIBLE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
                         maleStreet.setVisibility(View.VISIBLE);
@@ -92,6 +107,8 @@ public class AllClothing extends AppCompatActivity {
                         winterBoots.setVisibility(View.GONE);
                         accessory.setVisibility(View.VISIBLE);
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
+                        femaleStreet.setVisibility(View.VISIBLE);
+                        femaleParka.setVisibility(View.GONE);
 
                     }
                 } else {
@@ -103,13 +120,15 @@ public class AllClothing extends AppCompatActivity {
                         maleDressShoes.setVisibility(View.GONE);
 
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
+                        femaleSmart.setVisibility(View.VISIBLE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
                         maleStreet.setVisibility(View.VISIBLE);
                         parka.setVisibility(View.GONE);
                         winterBoots.setVisibility(View.GONE);
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
-
+                        femaleStreet.setVisibility(View.VISIBLE);
+                        femaleParka.setVisibility(View.GONE);
                     }
                 }
             }
