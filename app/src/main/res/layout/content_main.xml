@@ -101,10 +101,7 @@
         <EditText
             android:id="@+id/zipInput"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#CCCCCC"
-            android:ems="10"
-            android:inputType="textPersonName" >
+            android:layout_height="wrap_content" >
 
             <requestFocus />
         </EditText>
