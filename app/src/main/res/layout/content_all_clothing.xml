@@ -240,7 +240,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/flanelShirt"
+                android:id="@+id/flannelShirt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
@@ -250,7 +250,7 @@
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Flanel Shirt"
+                    android:text="Flannel Shirt"
                     android:textSize="18sp" />
 
                 <ImageView
@@ -385,9 +385,229 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/femaleSmart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/dress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/femalesmarttopdress"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Business Dress"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/female_smart_top_dress" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/blazer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/femalesmarttopblazer"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Blazer"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/female_smart_top_blazer" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/femaleDressPants"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/femalesmartbottomdresspants"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dress Pants"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/female_smart_bottom_dresspants" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/highHeels"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/femalesmartshoeshighheels"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="High Heels"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/female_smart_shoes_highheels" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/femaleStreet"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/femaleParka"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/femalestreettopparka"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Parka"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/female_street_top_parka" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vnecktshirt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/femalesmarttopvnecktshirt"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="T Shirt"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/female_street_top_vnecktshirt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/femaleJeans"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/femalesmartbottomjeans"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Jeans"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/female_street_bottom_jeans" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/combatBoots"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/femalesmartshoescombatboots"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Combat Boots"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/female_street_shoes_combatboots" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/femalesneakers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/femalesmartshoessneakers"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sneakers"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/female_street_shoes_sneakers" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

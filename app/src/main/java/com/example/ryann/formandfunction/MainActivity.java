@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     public static String globalWeather;
     public static double globalTemperature;
     public static double globalPrecipitation;
+    public static boolean fetchStatus = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +57,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToAllClothing(View v) {
-        startActivity(new Intent(MainActivity.this, AllClothing.class));
+        if (fetchStatus) {
+            startActivity(new Intent(MainActivity.this, AllClothing.class));
+        } else {
+            Snackbar.make(v, "Fetch Weather to Continue!", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
+
+
     }
 
     public void goToRandomOutfit(View v) {
@@ -93,6 +101,8 @@ public class MainActivity extends AppCompatActivity {
                         public void onResponse(final JSONObject response) {
                             Log.d(TAG, response.toString());
                             try {
+                                // Changes Fetch Status. If false, return error message in snackbar.
+                                fetchStatus = true;
                                 // Finds temperature
                                 JSONObject weatherTemp = response.getJSONObject("current");
                                 Double temperature = weatherTemp.getDouble("temp_f");
