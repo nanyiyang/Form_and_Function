@@ -19,7 +19,7 @@ public class AllClothing extends AppCompatActivity {
 
         try {
             // Selects clothing suitable for this weather.
-            if (MainActivity.globalTemperature < 45) {
+            if (MainActivity.globalTemperature < 45.0) {
                 if (MainActivity.globalPrecipitation > 0.0) {
                     // Returns clothing that is suitable for temperature below 45.0F and for Rainy weather
                     if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
