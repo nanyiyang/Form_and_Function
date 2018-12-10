@@ -16,6 +16,7 @@ public class AllClothing extends AppCompatActivity {
     public void getCorrectClothing() {
         LinearLayout maleStreet = (LinearLayout) findViewById(R.id.maleStreet);
         LinearLayout maleSmart = (LinearLayout) findViewById(R.id.maleSmart);
+        LinearLayout accesory = (LinearLayout) findViewById(R.id.accessory);
 
         try {
             // Selects clothing suitable for this weather.
@@ -23,12 +24,21 @@ public class AllClothing extends AppCompatActivity {
                 if (MainActivity.globalPrecipitation > 0.0) {
                     // Returns clothing that is suitable for temperature below 45.0F and for Rainy weather
                     if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
+                        LinearLayout chelseaBoots = (LinearLayout) findViewById(R.id.chelseaBoots);
+                        LinearLayout chinoPants = (LinearLayout) findViewById(R.id.chinos);
+                        LinearLayout oxfordShirt = (LinearLayout) findViewById(R.id.oxfordShirt);
                         maleSmart.setVisibility(View.VISIBLE);
+                        chelseaBoots.setVisibility(View.GONE);
+                        chinoPants.setVisibility(View.GONE);
+                        oxfordShirt.setVisibility(View.GONE);
+                        accesory.setVisibility(View.VISIBLE);
+
 
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
                         maleStreet.setVisibility(View.VISIBLE);
+                        accesory.setVisibility(View.VISIBLE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
@@ -51,7 +61,7 @@ public class AllClothing extends AppCompatActivity {
 
                 // Temperature is above 45.0
             } else {
-                if (MainActivity.globalTemperature > 0.0) {
+                if (MainActivity.globalPrecipitation > 0.0) {
                     // Returns clothing that is suitable for temperature above 45.0F and for Rainy weather
                     if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
 
