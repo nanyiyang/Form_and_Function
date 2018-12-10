@@ -6,6 +6,7 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -25,8 +26,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONException;
-import java.net.URLConnection;
-import java.net.URL;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     /** Default logging tag for messages from the main activity. */
@@ -92,9 +92,10 @@ public class MainActivity extends AppCompatActivity {
 
     void startAPICall() {
         try {
+            EditText zipText = (EditText)findViewById(R.id.zipInput);
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                     Request.Method.GET,
-                    "https://api.apixu.com/v1/current.json?key=7ad51d0551364c7c926203525180712&q=61801",
+                    "https://api.apixu.com/v1/current.json?key=7ad51d0551364c7c926203525180712&q=" + zipText.getText().toString(),
                     null,
                     new Response.Listener<JSONObject>() {
                         @Override

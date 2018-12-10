@@ -98,18 +98,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:helperText="Input Zipcode"
-            app:hintAnimationEnabled="false"
-            app:hintEnabled="false">
+        <EditText
+            android:id="@+id/zipInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#CCCCCC"
+            android:ems="10"
+            android:inputType="textPersonName" >
 
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="hint" />
-        </android.support.design.widget.TextInputLayout>
+            <requestFocus />
+        </EditText>
 
         <Button
             android:id="@+id/refreshWeatherButton"
