@@ -24,7 +24,7 @@ public class AllClothing extends AppCompatActivity {
         LinearLayout maleDressPants = (LinearLayout) findViewById(R.id.dressPants);
         LinearLayout maleDressShoes = (LinearLayout) findViewById(R.id.dressShoes);
         LinearLayout parka = (LinearLayout) findViewById(R.id.parka);
-        LinearLayout flanel = (LinearLayout) findViewById(R.id.flanelShirt);
+        LinearLayout flannel = (LinearLayout) findViewById(R.id.flannelShirt);
         LinearLayout tShirt = (LinearLayout) findViewById(R.id.tshirt);
         LinearLayout sneakers = (LinearLayout) findViewById(R.id.sneakers);
         LinearLayout winterBoots = (LinearLayout) findViewById(R.id.winterboots);
@@ -45,7 +45,7 @@ public class AllClothing extends AppCompatActivity {
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
                         maleStreet.setVisibility(View.VISIBLE);
-                        flanel.setVisibility(View.GONE);
+                        flannel.setVisibility(View.GONE);
                         tShirt.setVisibility(View.GONE);
                         sneakers.setVisibility(View.GONE);
                         accessory.setVisibility(View.VISIBLE);
@@ -65,7 +65,7 @@ public class AllClothing extends AppCompatActivity {
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
                         maleStreet.setVisibility(View.VISIBLE);
-                        flanel.setVisibility(View.GONE);
+                        flannel.setVisibility(View.GONE);
                         tShirt.setVisibility(View.GONE);
                         sneakers.setVisibility(View.GONE);
 

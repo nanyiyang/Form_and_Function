@@ -240,7 +240,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/flanelShirt"
+                android:id="@+id/flannelShirt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
@@ -250,7 +250,7 @@
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Flanel Shirt"
+                    android:text="Flannel Shirt"
                     android:textSize="18sp" />
 
                 <ImageView
