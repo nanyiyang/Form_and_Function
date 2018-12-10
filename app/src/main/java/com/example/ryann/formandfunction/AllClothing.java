@@ -16,7 +16,14 @@ public class AllClothing extends AppCompatActivity {
     public void getCorrectClothing() {
         LinearLayout maleStreet = (LinearLayout) findViewById(R.id.maleStreet);
         LinearLayout maleSmart = (LinearLayout) findViewById(R.id.maleSmart);
-        LinearLayout accesory = (LinearLayout) findViewById(R.id.accessory);
+        LinearLayout accessory = (LinearLayout) findViewById(R.id.accessory);
+        LinearLayout chelseaBoots = (LinearLayout) findViewById(R.id.chelseaBoots);
+        LinearLayout chinoPants = (LinearLayout) findViewById(R.id.chinos);
+        LinearLayout oxfordShirt = (LinearLayout) findViewById(R.id.oxfordShirt);
+        LinearLayout overcoat = (LinearLayout) findViewById(R.id.overcoat);
+        LinearLayout maleDressPants = (LinearLayout) findViewById(R.id.dressPants);
+        LinearLayout maleDressShoes = (LinearLayout) findViewById(R.id.dressShoes);
+
 
         try {
             // Selects clothing suitable for this weather.
@@ -24,21 +31,21 @@ public class AllClothing extends AppCompatActivity {
                 if (MainActivity.globalPrecipitation > 0.0) {
                     // Returns clothing that is suitable for temperature below 45.0F and for Rainy weather
                     if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
-                        LinearLayout chelseaBoots = (LinearLayout) findViewById(R.id.chelseaBoots);
-                        LinearLayout chinoPants = (LinearLayout) findViewById(R.id.chinos);
-                        LinearLayout oxfordShirt = (LinearLayout) findViewById(R.id.oxfordShirt);
                         maleSmart.setVisibility(View.VISIBLE);
                         chelseaBoots.setVisibility(View.GONE);
                         chinoPants.setVisibility(View.GONE);
                         oxfordShirt.setVisibility(View.GONE);
-                        accesory.setVisibility(View.VISIBLE);
+                        accessory.setVisibility(View.VISIBLE);
 
 
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
                         maleStreet.setVisibility(View.VISIBLE);
-                        accesory.setVisibility(View.VISIBLE);
+                        overcoat.setVisibility(View.GONE);
+                        maleDressPants.setVisibility(View.GONE);
+                        maleDressShoes.setVisibility(View.GONE);
+                        accessory.setVisibility(View.VISIBLE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
@@ -46,13 +53,19 @@ public class AllClothing extends AppCompatActivity {
                 } else {
                     // Returns clothing that is suitable for temperature below 45.0F and for Sunny weather
                     if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
-                        Log.d("Test", "HELLO IT REACHED HERE");
                         maleSmart.setVisibility(View.VISIBLE);
+                        chelseaBoots.setVisibility(View.GONE);
+                        chinoPants.setVisibility(View.GONE);
+                        oxfordShirt.setVisibility(View.GONE);
+                        accessory.setVisibility(View.VISIBLE);
 
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
                         maleStreet.setVisibility(View.VISIBLE);
+                        overcoat.setVisibility(View.GONE);
+                        maleDressPants.setVisibility(View.GONE);
+                        maleDressShoes.setVisibility(View.GONE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
