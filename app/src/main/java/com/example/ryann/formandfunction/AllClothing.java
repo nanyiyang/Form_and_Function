@@ -16,19 +16,39 @@ public class AllClothing extends AppCompatActivity {
     public void getCorrectClothing() {
         LinearLayout maleStreet = (LinearLayout) findViewById(R.id.maleStreet);
         LinearLayout maleSmart = (LinearLayout) findViewById(R.id.maleSmart);
+        LinearLayout accessory = (LinearLayout) findViewById(R.id.accessory);
+        LinearLayout chelseaBoots = (LinearLayout) findViewById(R.id.chelseaBoots);
+        LinearLayout chinoPants = (LinearLayout) findViewById(R.id.chinos);
+        LinearLayout oxfordShirt = (LinearLayout) findViewById(R.id.oxfordShirt);
+        LinearLayout overcoat = (LinearLayout) findViewById(R.id.overcoat);
+        LinearLayout maleDressPants = (LinearLayout) findViewById(R.id.dressPants);
+        LinearLayout maleDressShoes = (LinearLayout) findViewById(R.id.dressShoes);
+        LinearLayout parka = (LinearLayout) findViewById(R.id.parka);
+        LinearLayout flanel = (LinearLayout) findViewById(R.id.flanelShirt);
+        LinearLayout tShirt = (LinearLayout) findViewById(R.id.tshirt);
+        LinearLayout sneakers = (LinearLayout) findViewById(R.id.sneakers);
+        LinearLayout winterBoots = (LinearLayout) findViewById(R.id.winterboots);
+
 
         try {
             // Selects clothing suitable for this weather.
-            if (MainActivity.globalTemperature < 45) {
+            if (MainActivity.globalTemperature < 45.0) {
                 if (MainActivity.globalPrecipitation > 0.0) {
                     // Returns clothing that is suitable for temperature below 45.0F and for Rainy weather
                     if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
                         maleSmart.setVisibility(View.VISIBLE);
-
+                        chelseaBoots.setVisibility(View.GONE);
+                        chinoPants.setVisibility(View.GONE);
+                        oxfordShirt.setVisibility(View.GONE);
+                        accessory.setVisibility(View.VISIBLE);
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
                         maleStreet.setVisibility(View.VISIBLE);
+                        flanel.setVisibility(View.GONE);
+                        tShirt.setVisibility(View.GONE);
+                        sneakers.setVisibility(View.GONE);
+                        accessory.setVisibility(View.VISIBLE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
@@ -36,13 +56,18 @@ public class AllClothing extends AppCompatActivity {
                 } else {
                     // Returns clothing that is suitable for temperature below 45.0F and for Sunny weather
                     if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
-                        Log.d("Test", "HELLO IT REACHED HERE");
                         maleSmart.setVisibility(View.VISIBLE);
+                        chelseaBoots.setVisibility(View.GONE);
+                        chinoPants.setVisibility(View.GONE);
+                        oxfordShirt.setVisibility(View.GONE);
 
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
                         maleStreet.setVisibility(View.VISIBLE);
+                        flanel.setVisibility(View.GONE);
+                        tShirt.setVisibility(View.GONE);
+                        sneakers.setVisibility(View.GONE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
@@ -51,25 +76,38 @@ public class AllClothing extends AppCompatActivity {
 
                 // Temperature is above 45.0
             } else {
-                if (MainActivity.globalTemperature > 0.0) {
+                if (MainActivity.globalPrecipitation > 0.0) {
                     // Returns clothing that is suitable for temperature above 45.0F and for Rainy weather
                     if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
-
+                        maleSmart.setVisibility(View.VISIBLE);
+                        overcoat.setVisibility(View.GONE);
+                        maleDressPants.setVisibility(View.GONE);
+                        maleDressShoes.setVisibility(View.GONE);
+                        accessory.setVisibility(View.VISIBLE);
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
-
+                        maleStreet.setVisibility(View.VISIBLE);
+                        parka.setVisibility(View.GONE);
+                        winterBoots.setVisibility(View.GONE);
+                        accessory.setVisibility(View.VISIBLE);
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
                     }
                 } else {
                     // Returns clothing that is suitable for temperature above 45.0F and for Sunny weather
                     if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
+                        maleSmart.setVisibility(View.VISIBLE);
+                        overcoat.setVisibility(View.GONE);
+                        maleDressPants.setVisibility(View.GONE);
+                        maleDressShoes.setVisibility(View.GONE);
 
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
-
+                        maleStreet.setVisibility(View.VISIBLE);
+                        parka.setVisibility(View.GONE);
+                        winterBoots.setVisibility(View.GONE);
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
                     }
