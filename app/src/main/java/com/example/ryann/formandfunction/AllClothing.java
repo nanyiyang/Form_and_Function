@@ -72,6 +72,8 @@ public class AllClothing extends AppCompatActivity {
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
+                        LinearLayout maleSmart = (LinearLayout) findViewById(R.id.maleSmart);
+                        maleSmart.setVisibility(View.GONE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
@@ -81,10 +83,14 @@ public class AllClothing extends AppCompatActivity {
                 } else {
                     // Returns clothing that is suitable for temperature below 45.0F and for Sunny weather
                     if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Male")) {
+                        LinearLayout maleStreet = (LinearLayout) findViewById(R.id.maleStreet);
+                        maleStreet.setVisibility(View.GONE);
 
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Male")) {
+                        LinearLayout maleSmart = (LinearLayout) findViewById(R.id.maleSmart);
+                        maleSmart.setVisibility(View.GONE);
 
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
 
