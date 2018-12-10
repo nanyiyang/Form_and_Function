@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         // Set up a queue for our Volley requests
         requestQueue = Volley.newRequestQueue(this);
 
-        // Load the main layout for our activity
+        // Load the main layout for our activity new
         setContentView(R.layout.activity_main);
 
     }
