@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         if (fetchStatus) {
             startActivity(new Intent(MainActivity.this, AllClothing.class));
         } else {
-            Snackbar.make(v, "Fetch Weather to Continue.", Snackbar.LENGTH_LONG)
+            Snackbar.make(v, "Fetch Weather to Continue!", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
         }
 
