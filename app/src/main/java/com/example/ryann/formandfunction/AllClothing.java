@@ -30,9 +30,13 @@ public class AllClothing extends AppCompatActivity {
         LinearLayout tShirt = (LinearLayout) findViewById(R.id.tshirt);
         LinearLayout sneakers = (LinearLayout) findViewById(R.id.sneakers);
         LinearLayout winterBoots = (LinearLayout) findViewById(R.id.winterboots);
+
         LinearLayout vNeckTShirt = (LinearLayout) findViewById(R.id.vnecktshirt);
         LinearLayout femaleParka = (LinearLayout) findViewById(R.id.femaleParka);
+        LinearLayout highWaistedShorts = (LinearLayout) findViewById(R.id.femaleHighWaistedPants);
         LinearLayout femaleSneakers = (LinearLayout) findViewById(R.id.femalesneakers);
+        LinearLayout ballerinaFlats = (LinearLayout) findViewById(R.id.ballerinaflats);
+
         LinearLayout umbrella = (LinearLayout) findViewById(R.id.accessory_umbrella);
         LinearLayout scarf = (LinearLayout) findViewById(R.id.accessory_scarf);
 
@@ -62,7 +66,9 @@ public class AllClothing extends AppCompatActivity {
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
                         femaleStreet.setVisibility(View.VISIBLE);
                         vNeckTShirt.setVisibility(View.GONE);
+                        highWaistedShorts.setVisibility(View.GONE);
                         femaleSneakers.setVisibility(View.GONE);
+                        ballerinaFlats.setVisibility(View.GONE);
                         accessory.setVisibility(View.VISIBLE);
                     }
                 } else {
@@ -87,7 +93,9 @@ public class AllClothing extends AppCompatActivity {
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
                         femaleStreet.setVisibility(View.VISIBLE);
                         vNeckTShirt.setVisibility(View.GONE);
+                        highWaistedShorts.setVisibility(View.GONE);
                         femaleSneakers.setVisibility(View.GONE);
+                        ballerinaFlats.setVisibility(View.GONE);
                         accessory.setVisibility(View.VISIBLE);
                         umbrella.setVisibility(View.GONE);
                     }
