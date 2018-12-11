@@ -65,21 +65,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Champaign" />
+                android:text="-----" />
 
             <TextView
                 android:id="@+id/weatherValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Sunny" />
+                android:text="-----" />
 
             <TextView
                 android:id="@+id/temperatureValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="32 degrees"
+                android:text="-----"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
@@ -103,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:hint="Input Zipcode" >
+            android:hint=" Input Zipcode " >
             <requestFocus />
         </EditText>
 
