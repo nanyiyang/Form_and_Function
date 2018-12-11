@@ -36,6 +36,7 @@ public class AllClothing extends AppCompatActivity {
         LinearLayout highWaistedShorts = (LinearLayout) findViewById(R.id.femaleHighWaistedPants);
         LinearLayout femaleSneakers = (LinearLayout) findViewById(R.id.femalesneakers);
         LinearLayout ballerinaFlats = (LinearLayout) findViewById(R.id.ballerinaflats);
+        LinearLayout sandals = (LinearLayout) findViewById(R.id.sandals);
 
         LinearLayout umbrella = (LinearLayout) findViewById(R.id.accessory_umbrella);
         LinearLayout scarf = (LinearLayout) findViewById(R.id.accessory_scarf);
@@ -69,6 +70,7 @@ public class AllClothing extends AppCompatActivity {
                         highWaistedShorts.setVisibility(View.GONE);
                         femaleSneakers.setVisibility(View.GONE);
                         ballerinaFlats.setVisibility(View.GONE);
+                        sandals.setVisibility(View.GONE);
                         accessory.setVisibility(View.VISIBLE);
                     }
                 } else {
@@ -96,6 +98,7 @@ public class AllClothing extends AppCompatActivity {
                         highWaistedShorts.setVisibility(View.GONE);
                         femaleSneakers.setVisibility(View.GONE);
                         ballerinaFlats.setVisibility(View.GONE);
+                        sandals.setVisibility(View.GONE);
                         accessory.setVisibility(View.VISIBLE);
                         umbrella.setVisibility(View.GONE);
                     }
