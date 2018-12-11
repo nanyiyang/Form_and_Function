@@ -18,7 +18,7 @@ public class AllClothing extends AppCompatActivity {
         LinearLayout maleSmart = (LinearLayout) findViewById(R.id.maleSmart);
         LinearLayout femaleStreet = (LinearLayout) findViewById(R.id.femaleStreet);
         LinearLayout femaleSmart = (LinearLayout) findViewById(R.id.femaleSmart);
-        LinearLayout accessory = (LinearLayout) findViewById(R.id.accessory);
+
         LinearLayout chelseaBoots = (LinearLayout) findViewById(R.id.chelseaBoots);
         LinearLayout chinoPants = (LinearLayout) findViewById(R.id.chinos);
         LinearLayout oxfordShirt = (LinearLayout) findViewById(R.id.oxfordShirt);
@@ -38,6 +38,7 @@ public class AllClothing extends AppCompatActivity {
         LinearLayout ballerinaFlats = (LinearLayout) findViewById(R.id.ballerinaflats);
         LinearLayout sandals = (LinearLayout) findViewById(R.id.sandals);
 
+        LinearLayout accessory = (LinearLayout) findViewById(R.id.accessory);
         LinearLayout umbrella = (LinearLayout) findViewById(R.id.accessory_umbrella);
         LinearLayout scarf = (LinearLayout) findViewById(R.id.accessory_scarf);
 
