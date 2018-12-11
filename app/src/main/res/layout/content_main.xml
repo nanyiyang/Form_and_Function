@@ -101,8 +101,9 @@
         <EditText
             android:id="@+id/zipInput"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:hint="Input Zipcode" >
             <requestFocus />
         </EditText>
 
