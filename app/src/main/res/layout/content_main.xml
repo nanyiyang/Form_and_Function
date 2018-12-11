@@ -123,20 +123,13 @@
 
             <Button
                 android:id="@+id/allClothesButton"
-                android:layout_width="180dp"
+                android:layout_width="360dp"
                 android:layout_height="55dp"
                 android:onClick="goToAllClothing"
                 android:text="View All Clothing"
                 tools:layout_editor_absoluteX="196dp"
                 tools:layout_editor_absoluteY="118dp" />
 
-            <Button
-                android:id="@+id/randomOutfitButton"
-                android:layout_width="180dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:onClick="goToRandomOutfit"
-                android:text="Random Outfit" />
         </LinearLayout>
     </LinearLayout>
 

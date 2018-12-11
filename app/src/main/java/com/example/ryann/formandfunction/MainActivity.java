@@ -65,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void goToRandomOutfit(View v) {
-        startActivity(new Intent(MainActivity.this, RandomOutfit.class));
-    }
+//    public void goToRandomOutfit(View v) {
+//        startActivity(new Intent(MainActivity.this, RandomOutfit.class));
+//    }
 
     public void refreshWeather(View view) {
         ProgressBar refreshIcon = (ProgressBar) findViewById(R.id.progressBar);
