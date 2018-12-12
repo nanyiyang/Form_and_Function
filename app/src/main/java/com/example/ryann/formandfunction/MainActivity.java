@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public static double globalTemperature;
     public static double globalPrecipitation;
     public static boolean fetchStatus = false;
+    public static boolean zipError = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         //disables button so it can't be spammed.
         fetchWeatherNow.setEnabled(false);
         startAPICall();
-        new CountDownTimer(2000, 1000) {
+        new CountDownTimer(1000, 1000) {
             public void onTick(long millisUntilFinished) { }
             public void onFinish() {
                 ProgressBar refreshIcon = (ProgressBar) findViewById(R.id.progressBar);
@@ -86,6 +87,10 @@ public class MainActivity extends AppCompatActivity {
                 fetchWeatherNow.setEnabled(true);
             }
         }.start();
+        if (zipError) {
+            Snackbar.make(view, "Fetch weather with a valid zipcode to continue!", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
     }
 
     void startAPICall() {
@@ -102,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                             try {
                                 // Changes Fetch Status. If false, return error message in snackbar.
                                 fetchStatus = true;
+                                zipError = false;
                                 // Finds temperature
                                 JSONObject weatherTemp = response.getJSONObject("current");
                                 Double temperature = weatherTemp.getDouble("temp_f");
@@ -140,12 +146,15 @@ public class MainActivity extends AppCompatActivity {
                                 Log.d(TAG, precipitationString);
                             } catch (JSONException e) {
                                 Log.d(TAG, "ERROR JSON FILE PARSED INCORRECTLY");
+
                             }
                         }
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(final VolleyError error) {
+                            zipError = true;
                             Log.d(TAG, "VOLLEY ERROR DID NOT RECEIVE A  VALID JSON FILE");
+                            zipError = true;
                             Log.d(TAG, error.toString());
                         }
                     });
