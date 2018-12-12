@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 fetchWeatherNow.setEnabled(true);
             }
         }.start();
-        new CountDownTimer(500, 1000) {
+        new CountDownTimer(1000, 1000) {
             public void onTick(long millisUntilFinished) { }
             public void onFinish() {
                 if (zipError) {
