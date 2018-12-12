@@ -115,6 +115,7 @@ public class AllClothing extends AppCompatActivity {
                         maleDressPants.setVisibility(View.GONE);
                         maleDressShoes.setVisibility(View.GONE);
                         accessory.setVisibility(View.VISIBLE);
+                        scarf.setVisibility(View.GONE);
                     } else if (HomeScreen.globalPreference.equals("Smart") && HomeScreen.globalGender.equals("Female")) {
                         femaleSmart.setVisibility(View.VISIBLE);
                         accessory.setVisibility(View.VISIBLE);
@@ -124,9 +125,11 @@ public class AllClothing extends AppCompatActivity {
                         parka.setVisibility(View.GONE);
                         winterBoots.setVisibility(View.GONE);
                         accessory.setVisibility(View.VISIBLE);
+                        scarf.setVisibility(View.GONE);
                     } else if (HomeScreen.globalPreference.equals("Street") && HomeScreen.globalGender.equals("Female")) {
                         femaleStreet.setVisibility(View.VISIBLE);
                         femaleParka.setVisibility(View.GONE);
+                        accessory.setVisibility(View.VISIBLE);
 
                     }
                 } else {
