@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(new Intent(MainActivity.this, RandomOutfit.class));
 //    }
 
-    public void refreshWeather(View view) {
+    public void refreshWeather(final View view) {
         ProgressBar refreshIcon = (ProgressBar) findViewById(R.id.progressBar);
         refreshIcon.setVisibility(View.VISIBLE);
         Button fetchWeatherNow = (Button) findViewById(R.id.refreshWeatherButton);
@@ -87,10 +87,16 @@ public class MainActivity extends AppCompatActivity {
                 fetchWeatherNow.setEnabled(true);
             }
         }.start();
-        if (zipError) {
-            Snackbar.make(view, "Fetch weather with a valid zipcode to continue!", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
-        }
+        new CountDownTimer(500, 1000) {
+            public void onTick(long millisUntilFinished) { }
+            public void onFinish() {
+                if (zipError) {
+                    Snackbar.make(view, "Fetch weather with a valid zipcode to continue!", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+            }
+        }.start();
+
     }
 
     void startAPICall() {
@@ -153,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(final VolleyError error) {
                             zipError = true;
+                            fetchStatus = false;
                             Log.d(TAG, "VOLLEY ERROR DID NOT RECEIVE A  VALID JSON FILE");
                             zipError = true;
                             Log.d(TAG, error.toString());
